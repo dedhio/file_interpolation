@@ -7,7 +7,7 @@ int main()
   char nome_arquivo[80];
   int leitura;
   int i = 0;
-  float x, y;
+  float x, y, user_x;
   float menor_x = FLT_MAX, maior_x = FLT_MIN;
 
   printf("Arquivo para processar -> ");
@@ -34,9 +34,17 @@ int main()
   }
   fclose(arquivo);
 
-  printf("Intervalos encontrados = %d\n", i-1);
+  printf("Coordenadas encontradas = %d\n", i-1);
   printf("Maior valor de X ==> %.2f\n", maior_x);
   printf("Menor valor de X ==> %.2f\n", menor_x);
+
+  printf("\nDigite um valor de X -> ");
+  scanf("%f", &user_x);
+
+  if (user_x < menor_x || user_x > maior_x){
+      printf("\nERRO: O valor digitado está fora do intervalo esperado.\n");
+      return(0);
+  }
 
   return(0);
 }
