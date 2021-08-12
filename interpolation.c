@@ -28,7 +28,7 @@ float calcula_interpolacao(float xp, coordenada *le){
                 yp = c->y;
                 return yp;
             } else if (xp < c->x && xp > aux->x){
-                printf ("xp=%.1f x0=%.1f y0=%.1f x1=%.1f y1=%.1f\n", xp, c->x, c->y, aux->x, aux->y);
+                printf ("\nIntervalo considerado\nx0=%.1f y0=%.1f \nx1=%.1f y1=%.1f\n", aux->x, aux->y, c->x, c->y);
                 x0 = c->x;
                 y0 = c->y;
                 x1 = aux->x;
